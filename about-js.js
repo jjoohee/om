@@ -51,7 +51,7 @@ window.onscroll = function(){
       om19.style.opacity = "";
     }
 
-    if (t > 2000) {
+    if (t > 1900) {
       text2.style.opacity  = "100%";
     }
 
