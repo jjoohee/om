@@ -100,7 +100,7 @@ transition: width 1000ms cubic-bezier(.25, 0, 0, 1);
 #back3{
 	position: absolute;
 	left: calc(50% - 600px);
-	bottom: 0px;
+	bottom: -400px;
 
 }
 
