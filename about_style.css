@@ -1,0 +1,732 @@
+            @font-face {
+    font-family: 'MapoGoldenPier';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoGoldenPierA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, div, h1, p{margin: 0;}
+body{ position: relative; background: black;
+	}
+h1, p{ color: white;
+		font-family: 'MapoGoldenPier';}
+p{line-height: 1.9em; word-break: keep-all; font-size: 1.2em;}
+
+.preloader {
+display:inline;
+z-index: 2000;
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background-color: white;
+transition: opacity .65s ease;
+}
+.loading-bar {
+width: 12%;
+height: 4px;
+background-color: #000;
+transition: width 1000ms cubic-bezier(.25, 0, 0, 1); 
+}
+
+#moniter{width: 80px; height: 30px; background: black; color: white; position: fixed; top: 0; right: 0;
+		opacity: 100%}
+
+		@keyframes lo{
+				from{left: -100px;} to{left: 0px;}
+			}
+		@keyframes ro{
+				from{right: 100px;} to{right: 0px;}
+			}
+
+
+#titlee{
+	width: 1200px;
+	height: 700px;
+	position: absolute;
+	left: calc(50% - 600px);
+	top: 0px;
+	background: #371458;
+	z-index: 1000;
+}
+
+#timgback{
+	position: absolute;
+	top: 0px;
+	left: calc(50% - 600px);
+}
+
+#timg{
+	width: 600px;
+	height: auto;
+	position: absolute;
+	left: calc(50% - 300px);
+	top: calc(50% - 192.5px);
+}
+
+.warp{
+	width: 1200px; height: 7806px; position: absolute;
+	left: calc(50% - 600px);
+	top: 610px;
+	background: url(back0.gif);
+	overflow: hidden;
+}
+
+@media (max-width: 980px){
+	.warp{
+		left: calc(50% - 490px);
+	}
+	#titlee{
+		left: calc(50% - 490px);
+	}
+}
+
+/*이미지 css*/
+
+
+#back1{
+	position: absolute;
+	left: calc(50% - 600px);
+	top: 0px;
+}
+
+#back2{
+	position: absolute;
+	left: calc(50% - 600px);
+	top: 1956px;
+}
+
+#back3{
+	position: absolute;
+	left: calc(50% - 600px);
+	bottom: 0px;
+
+}
+
+@keyframes omm { 
+				to {position: absolute; transform: rotate(20deg);}
+				from{position: absolute; transform: rotate(50deg)}
+			}
+@keyframes -omm { 
+				to {position: absolute; transform: rotate(-20deg);}
+				from{position: absolute; transform: rotate(-50deg)}
+			}
+
+@keyframes ommm { 
+				to {position: absolute; transform: rotate(50deg);}
+				from{position: absolute; transform: rotate(60deg)}
+			}
+@keyframes -ommm { 
+				to {position: absolute; transform: rotate(-50deg);}
+				from{position: absolute; transform: rotate(-60deg)}
+			}
+@keyframes oomm { 
+				to {position: absolute; transform: rotate(70deg);}
+				from{position: absolute; transform: rotate(90deg)}
+			}
+@keyframes -oommm { 
+				to {position: absolute; transform: rotate(-70deg);}
+				from{position: absolute; transform: rotate(-90deg)}
+			}
+
+@keyframes iom { 
+				to {position: absolute; transform: rotate(160deg);}
+				from{position: absolute; transform: rotate(185deg)}
+			}
+@keyframes -iom { 
+				to {position: absolute; transform: rotate(-160deg);}
+				from{position: absolute; transform: rotate(-185deg)}
+			}
+
+#om1{
+	position: absolute;
+	width: 100px;
+	height: auto;
+	left: calc(50% - 50px);
+	top: 270px;
+	opacity: 0%;
+	transition: opacity 1.3s;
+}
+
+#om2{
+	position: absolute;
+	width: 110px;
+	height: auto;
+	left: 495px;
+	top: 365px;
+	transform: rotate(30deg);
+	opacity: 0%;
+	transition: opacity 1.3s 0.3s;
+	animation: omm 1s infinite linear alternate;
+}
+
+#om3{
+	position: absolute;
+	width: 120px;
+	height: auto;
+	right:  495px;
+	top: 460px;
+	transform: rotate(-30deg);
+	animation: -omm 1s infinite linear alternate;
+	opacity: 0%;
+	transition: opacity 1.3s 0.3s;
+}
+
+#om4{
+	position: absolute;
+	position: absolute;
+	width: 130px;
+	height: auto;
+	left: 445px;
+	top: 510px;
+	transform: rotate(60deg);
+	animation: ommm 1s infinite linear alternate;
+	opacity: 0%;
+	transition: opacity 1.3s 0.3s;
+}
+
+#om5{
+	position: absolute;
+	position: absolute;
+	width: 200px;
+	height: auto;
+	left: 400px;
+	top: 640px;
+	transform: rotate(10deg);
+	opacity: 0%;
+	transition: opacity 1.3s 0.3s;
+}
+
+
+#om5_1{
+		position: absolute;
+	width: 190px;
+	height: auto;
+	right:  440px;
+	top: 710px;
+	transform: rotate(-40deg);
+	animation: -omm 1s infinite linear alternate;
+	opacity: 0%;
+	transition: opacity 1.3s 0.3s;
+}
+
+#om6{
+	position: absolute;
+	width: 140px;
+	height: auto;
+	right:  420px;
+	top: 590px;
+	transform: rotate(-17deg);
+	opacity: 0%;
+	transition: opacity 1.3s 0.3s;
+}
+
+#om7{
+	position: absolute;
+	position: absolute;
+	width: 200px;
+	height: auto;
+	left: 210px;
+	top: 700px;
+	transform: rotate(70deg);
+	animation: oomm 1s infinite linear alternate;
+	opacity: 0%;
+	transition: opacity 1.3s 0.3s;
+}
+
+#om7_1{
+	position: absolute;
+	position: absolute;
+	width: 200px;
+	height: auto;
+	right: 210px;
+	top: 700px;
+	transform: rotate(-70deg);
+	animation: -oomm 1s infinite linear alternate;
+	opacity: 0%;
+	transition: opacity 1.3s 0.3s;
+}
+
+#om8{
+
+	position: absolute;
+	width: 300px;
+	height: auto;
+	left: -140px;
+	top: 660px;
+	transform: rotate(90deg);
+	animation: oomm 1s infinite linear alternate;
+	opacity: 0%;
+	transition: opacity 1.3s 0.6s;
+}
+
+#om9{
+	position: absolute;
+	width: 400px;
+	height: auto;
+	left: -140px;
+	top: 830px;
+	transform: rotate(50deg);
+	animation: ommm 1s infinite linear alternate;
+	opacity: 0%;
+	transition: opacity 1.3s 0.6s;
+}
+
+#om10{
+	position: absolute;
+	width: 420px;
+	height: auto;
+	left: -50px;
+	top: 1040px;
+	transform: rotate(30deg);
+	animation: omm 1s infinite linear alternate;
+	opacity: 0%;
+	transition: opacity 1.3s 0.6s;
+}
+
+#om11{
+	position: absolute;
+	width: 300px;
+	height: auto;
+	right: -140px;
+	top: 660px;
+	transform: rotate(-90deg);
+	animation: -oomm 1s infinite linear alternate;
+	opacity: 0%;
+	transition: opacity 1.3s 0.6s;
+}
+
+#om12{
+	position: absolute;
+	width: 400px;
+	height: auto;
+	right: -140px;
+	top: 830px;
+	transform: rotate(-50deg);
+	animation: -ommm 1s infinite linear alternate;
+	opacity: 0%;
+	transition: opacity 1.3s 0.6s;
+}
+
+#om13{
+		position: absolute;
+	width: 420px;
+	height: auto;
+	right:  -50px;
+	top: 1040px;
+	transform: rotate(-30deg);
+	animation: -omm 1s infinite linear alternate;
+	opacity: 0%;
+	transition: opacity 1.3s 0.6s;
+}
+
+#om14{
+	position: absolute;
+	width: 320px;
+	height: auto;
+	left: 100px;
+	top: 795px;
+	transform: rotate(45deg);
+	animation: ommm 1s infinite linear alternate;
+	opacity: 0%;
+	transition: opacity 1.3s 0.6s;
+}
+
+#om15{
+	position: absolute;
+	width: 320px;
+	height: auto;
+	right: 100px;
+	top: 795px;
+	transform: rotate(-45deg);
+	animation: -ommm 1s infinite linear alternate;
+	opacity: 0%;
+	transition: opacity 1.3s 0.6s;
+}
+
+
+#om16{
+	position: absolute;
+	width: 280px;
+	height: auto;
+	left: 330px;
+	top: 825px;
+	transform: rotate(10deg);
+	opacity: 0%;
+	transition: opacity 1.3s 0.6s;
+}
+
+#om17{
+	position: absolute;
+	width: 280px;
+	height: auto;
+	right: 330px;
+	top: 825px;
+	transform: rotate(-10deg);
+	opacity: 0%;
+	transition: opacity 1.3s 0.6s;
+}
+
+#om18{
+	position: absolute;
+	width: 380px;
+	height: auto;
+	left:  240px;
+	top: 1050px;
+	transform: rotate(30deg);
+	animation: omm 1s infinite linear alternate;
+	opacity: 0%;
+	transition: opacity 1.3s 0.6s;
+}
+#om19{
+	position: absolute;
+	width: 380px;
+	height: auto;
+	right: 240px;
+	top: 1050px;
+	transform: rotate(-30deg);
+	animation: -omm 1s infinite linear alternate;
+	opacity: 0%;
+	transition: opacity 1.3s 0.6s;
+}
+
+@keyframes lit { 
+				to {position: absolute; transform: translateX(5%);}
+			}
+@keyframes -lit { 
+				to {position: absolute; transform: translateX(-5%);}
+			}
+
+#little1{
+	position: absolute;
+	top: 2010px;
+	left: 300px;
+	animation: lit 1.4s infinite linear alternate;
+
+}
+
+#little2{
+	position: absolute;
+	top: 2210px;
+	left: 60px;
+	animation: -lit 1.7s infinite linear alternate;
+
+}
+
+#little3{
+	position: absolute;
+	top: 2420px;
+	left: 370px;
+	/*좌우반전*/
+	 -moz-tranform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    animation: liit 1.5s infinite linear alternate;
+
+}
+@keyframes liit { 
+				to {position: absolute; left: 390px;}
+			}
+
+#moon{
+	position: absolute;
+	width: 240px; height:240px;
+	right: 38px; top: 2980px;
+	background: white;
+	border:2px solid black;
+	border-radius:200px;
+}
+
+#moun{
+	position: absolute;
+	left: calc(50% - 600px);
+	top: 4440px;
+
+}
+
+
+#om1_2{
+	position: absolute;
+	width: 80px;
+	height: auto;
+	top: 2800px;
+	left: 180px;
+	transform: rotate(-120deg);
+}
+
+#om2_2{
+	position: absolute;
+	width: 100px;
+	height: auto;
+	top: 2890px;
+	left: 150px;
+	transform: rotate(120deg);	
+}
+
+#om3_2{
+	position: absolute;
+	width: 120px;
+	height: auto;
+	top: 2990px;
+	left: 110px;
+	transform: rotate(160deg);	
+	animation: iom 1s infinite linear alternate;
+}
+
+
+#om4_2{
+	position: absolute;
+	width: 90px;
+	height: auto;
+	top: 2970px;
+	left: 230px;
+	transform: rotate(50deg);
+	animation: ommm 1s infinite linear alternate;
+}
+
+
+#om5_2{
+	position: absolute;
+	width: 150px;
+	height: auto;
+	top: 3065px;
+	left: 200px;
+	transform: rotate(150deg);
+	animation: iom 1s infinite linear alternate;
+}
+
+#om6_2{
+	position: absolute;
+	width: 130px;
+	height: auto;
+	top: 3175px;
+	left: 140px;
+	transform: rotate(80deg);
+	animation: oomm 1s infinite linear alternate;
+}
+
+#om7_2{
+	position: absolute;
+	width: 130px;
+	height: auto;
+	top: 3210px;
+	left: 250px;
+	transform: rotate(180deg);
+	animation: iom 1s infinite linear alternate;
+}
+
+#om8_2{
+	position: absolute;
+	width: 190px;
+	height: auto;
+	top: 3330px;
+	left: 120px;
+	transform: rotate(100deg);
+}
+
+#om9_2{
+	position: absolute;
+	width: 190px;
+	height: auto;
+	top: 3280px;
+	left: 320px;
+	transform: rotate(150deg);
+	animation: iom 1s infinite linear alternate;
+}
+
+#om10_2{
+		position: absolute;
+	width: 190px;
+	height: auto;
+	top: 3520px;
+	left: 60px;
+	transform: rotate(100deg);
+}
+
+#om11_2{
+	position: absolute;
+	width: 250px;
+	height: auto;
+	top: 3480px;
+	left: 230px;
+	transform: rotate(50deg);
+	animation: ommm 1s infinite linear alternate;
+}
+
+
+#om12_2{
+	position: absolute;
+		width: 250px;
+	height: auto;
+	top: 3400px;
+	left: 430px;
+	transform: rotate(90deg);
+	animation: oomm 1s infinite linear alternate;
+}
+
+#om13_2{
+	position: absolute;
+	width: 160px;
+	height: auto;
+	top: 3420px;
+	left: 660px;
+	transform: rotate(170deg);
+	animation: iom 1s infinite linear alternate;
+}
+
+#om14_2{
+	position: absolute;
+	width: 220px;
+	height: auto;
+	top: 3610px;
+	left: 520px;
+	transform: rotate(100deg);
+}
+
+#om15_2{
+	position: absolute;
+	width: 220px;
+	height: auto;
+	top: 3700px;
+	left: 100px;
+	transform: rotate(-150deg);
+	animation: -iom 1s infinite linear alternate;
+}
+
+#om16_2{
+	position: absolute;
+	width: 260px;
+	height: auto;
+	top: 3680px;
+	left: 300px;
+	transform: rotate(170deg);
+	animation: iom 1s infinite linear alternate;
+}
+
+
+
+#omly{
+	position: absolute;
+	width: 200px;
+	height: auto;
+	left: 550px;
+	top: 2450px;
+	transform: rotate(130deg);
+	transition: all 2s;
+	animation: oml 1s infinite linear alternate;
+}
+
+@keyframes oml { 
+				to {position: absolute; transform: rotate(120deg);}
+				from{position: absolute; transform: rotate(140deg)}
+			}
+
+#line{
+	position: absolute;
+	right: -75px;
+	top: 4110px;
+	animation: lin 1.7s infinite linear alternate;
+}
+
+@keyframes lin { 
+				to {transform: ; position: absolute; z-index: 0;}
+				from{transform: translateY(7%); position: absolute; z-index: 0;}
+			} 
+
+
+#sad{
+	position: absolute;
+	left: 0px;
+	top: 3540px;
+	animation: sa 2s infinite linear alternate;
+}
+
+@keyframes sa { 
+				to {transform: ; position: absolute; z-index: 0;}
+				from{transform: translateY(-2%); position: absolute; z-index: 0;}
+			} 
+
+#pep{
+	position: absolute;
+	left: -120px;
+	top: 4945px;
+	transition: 1s all;
+
+}
+
+#cicom1{
+	position: absolute;
+	left: -100px;
+	top: 5840px;
+	animation:io 10s infinite linear;
+}
+
+#cicom2{
+	position: absolute;
+	right: -155px;
+	top: 4965px;
+	animation:cio 10s infinite linear;
+}
+
+@keyframes io { 
+				to {transform: rotate(-0deg); position: absolute; z-index: 0;}
+				from{transform: rotate(-360deg); position: absolute; z-index: 0;}
+			} 
+
+@keyframes cio { 
+				to {transform: rotate(0deg); position: absolute; z-index: 0;}
+				from{transform: rotate(360deg); position: absolute; z-index: 0;}
+			} 
+
+/*텍스트 css*/
+
+.spanclass{
+	background: black;
+	padding: 2px;
+}
+
+.maintext{
+	width: 600px; height: 300px;
+	left: calc(50% - 300px);
+	top: 50px;
+	position: absolute;
+	text-align: center;
+	
+}
+
+#text1{
+	top: 450px;
+}
+
+#text2{
+	top: 1650px;
+	opacity: 0%;
+	transition: 1.5s all;
+
+}
+
+#text3{
+	top: 2300px;
+}
+
+#text4{
+	top: 3330px;
+	opacity: 0%;
+	transition: 1.5s all;
+}
+
+#text5{
+	top: 4670px;
+	opacity: 0%;
+	transition: 1.5s all;
+}
+
+#text6{
+	top: 5600px;
+	opacity: 0%;
+	transition: 1.5s all;
+}
